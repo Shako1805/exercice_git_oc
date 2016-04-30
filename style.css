@@ -24,6 +24,82 @@ body
     font-family: 'ambleregular', Arial, serif;
 }
 
+/* *************************************************** */
+/* MEDIA QUERY pour Ecran + largeur maximale de 1024px */
+/* *************************************************** */
+@media screen and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    /* Masquage du Liseré */
+    #bloc_deco
+    {
+        display: none;
+    }
+
+    #bloc_infos
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    section
+    {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px; /* Pour avoir un peu d'espace entre l'entête et la section Expérience/Compétences/Formations/*/
+    }
+    .zone_texte
+    {
+        width: 100%;
+    }
+
+    h2
+    {
+        margin: 10px;
+        /* Largeur */
+        padding-left: 10px;
+        /* Couleur du texte */
+        color: #87591A;
+        /* Bordure */
+        border: 2px #87591A double;
+        border-radius: 10px;
+        /* Ombrage */
+        box-shadow: 6px 6px 12px #87591A;
+    }
+
+    header
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #nom_citation
+    {
+        /* Nom et citation l'un au dessus de l'autre */
+        flex-direction: column;
+        /* Pour avoir tout l'espace disponible restant et centre le texte */
+        width: 100%;
+        text-align: center;
+    }
+
+    header img
+    {
+        border-right: 2px #87591A double;
+        border-bottom: 2px #87591A double;
+        box-shadow: 6px 6px 12px #87591A;
+    }
+}
+/* ********************************************************** */
+/* FIN DU MEDIA QUERY pour Ecran + largeur maximale de 1024px */ 
+/* ********************************************************** */
+
+
 #bloc_page
 {
     display: flex;
@@ -33,7 +109,7 @@ body
 /* ***************** Partie Liseré ****************** */
 #bloc_deco
 {
-    display: flex;
+    /*display: flex;*/
     height: 750px;
     width: 10%; /* Largeur fixée à 10% de la zone d'affichage */
     min-width: 100px; /* En cas de redimensionnement, largeur mini de 100px */
@@ -41,21 +117,18 @@ body
     /* Adoucissement du cadre du liseré */
     border-radius: 10px;
 }
-
 /* *********** Partie Titre + Information *********** */
 #bloc_infos
 {
     display: flex;
     flex-direction: column;
-    width: 90%; /* occupera le maximum de l'espace restant (cf. valeur min du liseré) */
-    /* NOTE: LA PARTIE "RESPONSIVE" ETANT ABORDEE PLUS TARD, ON NE S'EN PREOCCUPE PAS POUR L'INSTANT */
+    width: 90%;
 }
 
 header
 {
     display: flex;
     justify-content: flex-end;
-    /* NOTE: LA PARTIE "RESPONSIVE" ETANT ABORDEE PLUS TARD, ON NE S'EN PREOCCUPE PAS POUR L'INSTANT */
 }
 
 #nom_citation
@@ -80,20 +153,15 @@ section
     padding-top: 20px; /* Pour avoir un peu d'espace entre l'entête et la section Expérience/Compétences/Formations/*/
 }
 
-.zone_texte
-{
-    width: 33%; /* 3 zones de texte, chacune occupant 33% de la zon disponible */
-    min-width: 300px;
-}
 
 /* Changement de couleur du titre 2 */
 h2
 {
     margin: 10px;
-	/* Largeur */
-	width: 70%;
+    /* Largeur */
+/*    width: 70%;*/
     padding-left: 10px;
-	/* Couleur du texte */
+    /* Couleur du texte */
     color: #87591A;
     /* Bordure */
     border: 2px #87591A double;
@@ -101,4 +169,3 @@ h2
     /* Ombrage */
     box-shadow: 6px 6px 12px #87591A;
 }
-
